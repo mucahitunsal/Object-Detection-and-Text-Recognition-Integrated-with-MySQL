@@ -57,6 +57,9 @@ class Data(Base):
         return f"({self.Data_Id}) {self.OCR_Text} {self.Accuracy} {self.Model_Name}"
 
 
+# Uncomment the following code if you create the database
+# Base.metadata.create_all(bind=engine)
+
 # Create a session
 Session = sessionmaker(bind=engine)
 session = Session()
